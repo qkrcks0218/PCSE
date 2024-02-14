@@ -1,6 +1,6 @@
 # Replication Files for "Proximal Causal Inference for  Conditional Separable Effects"
 
-This supplementary file contains replication codes for "Proximal Causal Inference for  Conditional Separable Effects" ([(Park, Strensrud, Tchetgen Tchetgen)(Link "PCSE")]).
+This supplementary file contains replication codes for "Proximal Causal Inference for  Conditional Separable Effects" ([Park, Strensrud, Tchetgen Tchetgen, 2024](Link "PCSE")).
 
 ## Software and Packages
 
