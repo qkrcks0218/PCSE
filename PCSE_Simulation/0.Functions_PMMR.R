@@ -1,7 +1,6 @@
 library(MASS)
 library(Matrix)
 library(pracma)
-library(np)
 
 WS <- function(x,lb,ub){
   if(is.null(x)){
