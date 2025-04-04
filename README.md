@@ -15,7 +15,7 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 
 * 0.Functions\_PMMR.R contains functions used for estimating bridge functions based on the Proxy Maximum Moment Restriction (PMMR) method ([Mastouri et al., 2021](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")).  
 
-* 1.Est\_PMMR\_Exp.R and 2.Est\_PMMR\_Obs.R 
+* 1.Est\_PMMR\_Exp.R and 1.Est\_PMMR\_Obs.R 
 	* This file replicates the simulation study. Parallel computing is recommended. 
 	* This file returns an effect estimate using the proposed approach in the paper.
 	* The results are saved as "Result_PMMR_[aaa]_N[bbbb]_sdU[c]_B[ddddd].csv" files.
@@ -33,12 +33,18 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 	* [c] indicates whether an unmeasured confounder U is present or not.
 	* [ddddd] indicates the random seed for generating a simulated dataset.
 
-* 3.Est\_PMMR\_NuisanceFt.R
+* 3.Summary.R
+	* This file summarizes results obtained from 1.Est\_PMMR\_Exp.R and 1.Est\_PMMR\_Obs.R  and 2.Est\_NoU\_Exp.R and 2.Est\_NoU\_Obs.R. 
+
+* 4.Est\_PMMR\_NuisanceFt.R
 	* This file replicates the simulation study in the supplementary material. Parallel computing is recommended.
 	* This file returns the mean squared error of the PMMR estimators. 
 	* The results are saved as "PSE_Nuisance_N[aa]_B[bbbbb].csv" files.
 	* [aa] indicates the exponent of the number of observations in each simulated dataset.
 	* [bbbbb] indicates the random seed for generating a simulated dataset.
+	
+* 5.Summary_NuisanceFt.R
+	* This file summarizes results obtained from 5.Summary_NuisanceFt.R.
 
 ## References
 
