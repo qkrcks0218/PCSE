@@ -17,9 +17,9 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 
 * `0.DGP.R` contains the data generating process.  
 
-* `0.Functions+PMMR.R` contains functions for estimating bridge functions based on the Proxy Maximum Moment Restriction (PMMR) method ([Mastouri et al., 2021](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")).  
+* `0.Functions_PMMR.R` contains functions for estimating bridge functions based on the Proxy Maximum Moment Restriction (PMMR) method ([Mastouri et al., 2021](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")).  
 
-* `1.Est+PMMR+Exp.R` and `1.Est+PMMR+Obs.R` 
+* `1.Est_PMMR_Exp.R` and `1.Est_PMMR_Obs.R` 
 	* These files replicate the simulation studies under experimental and observational settings, respectively.
 	* Parallel computing is recommended for running these codes.
 	* Each script returns an effect estimate using the proposed method.
@@ -29,7 +29,7 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 	* `[c]` indicates whether an unmeasured confounder U is present or not.
 	* `[ddddd]` indicates the random seed for generating a simulated dataset.
 
-* `2.Est+NoU+Exp.R` and `2.Est+NoU+Obs.R`
+* `2.Est_NoU_Exp.R` and `2.Est_NoU_Obs.R`
 	* These files replicate the simulation studies under experimental and observational settings, respectively.
 	* Parallel computing is recommended for running these codes.
 	* Each script returns an effect estimate under the no unmeasured confounding assumption.
@@ -39,9 +39,9 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 	* `[c]` indicates whether an unmeasured confounder U is present or not.
 	* `[ddddd]` indicates the random seed for generating a simulated dataset.
 
-* `3.Figure2_and_FigureA2.R` replicates Figure 2 in the main paper and Figure A2 in the supplementary material, visualizing effect estimates obtained from `1.Est+PMMR+Exp.R`, `1.Est+PMMR+Obs.R`, `2.Est+NoU+Exp.R`, and `2.Est+NoU+Obs.R`
+* `3.Figure2_and_FigureA2.R` replicates Figure 2 in the main paper and Figure A2 in the supplementary material, visualizing effect estimates obtained from `1.Est_PMMR_Exp.R`, `1.Est_PMMR_Obs.R`, `2.Est_NoU_Exp.R`, and `2.Est_NoU_Obs.R`
 
-* `4.Est+PMMR+NuisanceFt.R`
+* `4.Est_PMMR_NuisanceFt.R`
 	* This file replicates the simulation study reported in the supplementary material.
 	* Parallel computing is recommended.
 	* This file computes the mean squared error of the PMMR nuisance function estimators.
@@ -49,7 +49,7 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 	* [aa] indicates the exponent of the number of observations in each simulated dataset.
 	* [bbbbb] indicates the random seed for generating a simulated dataset.
 	
-* `5.FigureA3.R` replicates FigureA4 in the supplementary material, summarizing the convergence rates of the estimated nuisance functions from `4.Est+PMMR+NuisanceFt.R`.
+* `5.FigureA3.R` replicates FigureA4 in the supplementary material, summarizing the convergence rates of the estimated nuisance functions from `4.Est_PMMR_NuisanceFt.R`.
 	
 
 
@@ -63,7 +63,7 @@ Interested readers can directly contact the study team of the SWOG trial (https:
 
 * `0.MySL.R` contains functions for estimating nuisance functions using the Super Learner algorithm ([van der Laan, Polley, Hubbard, 2007](https://www.degruyter.com/document/doi/10.2202/1544-6115.1309/html "SL")).
 
-* `0.Functions+PMMR.R` contains functions for estimating bridge functions based on the Proxy Maximum Moment Restriction (PMMR) method ([Mastouri et al., 2021](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")).  
+* `0.Functions_PMMR.R` contains functions for estimating bridge functions based on the Proxy Maximum Moment Restriction (PMMR) method ([Mastouri et al., 2021](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")).  
 
 * `1.Analysis.R`
 	* This file replicates the data analysis using a simulated dataset.
