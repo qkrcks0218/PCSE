@@ -29,7 +29,7 @@ W <- sqrt(1-0.2^2)*rnorm(N) + 0.2*U
 Z <- sqrt(1-0.2^2)*rnorm(N) + 0.2*U
 D <- rbinom(N,1,0.15+0.01*(X01+X02+X03+X04+X05)+0.1*X1+0.02*U+0.1*A)
 Y <- rep(N)
-Y <- -5*A - 0.5*(X01+X02+X03+X04+X05)-1*X1-2*U-rnorm(N)*10
+Y <- -4.5-2*A - 0.5*(X01+X02+X03+X04+X05)-1*X1-2*U-rnorm(N)*20
 Y <- Y*(1-D)
 
 Data <- data.frame(cbind(Y,A,D,Z,W,X01,X02,X03,X04,X05,X1))
@@ -68,7 +68,7 @@ NumCVRep <- 5
 
 ## Superlearner parameters
 SL.hpara <- list()
-SL.hpara$SLL <- 1 # c(1,2,3,4,5,6,7,9,10)
+SL.hpara$SLL <- c(1,2,3,4,5,6,7,9,10)
 
 # Superlearner basic learning algorithms:
 # 1: GLM
