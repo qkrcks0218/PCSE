@@ -17,25 +17,30 @@ if(length(args) == 1){
 set.seed(1) # Fix a random seed for generating a simulated dataset
 N <- 487
 A <- rep(c(0,1),c(258,229))
+PrA0 <- mean(1-A)
 X01 <- rbinom(N,1,0.5)
 X02 <- rbinom(N,1,0.5)
 X03 <- rbinom(N,1,0.5)
 X04 <- rbinom(N,1,0.5)
 X05 <- rbinom(N,1,0.5)
 U   <- rnorm(N)
-X1  <- rbinom(N,1,0.5+0.05*A*(X01+X02+X03+X04+X05)+0.05*U)
+X1  <- rbinom(N,1,0.2+0.05*A*(X01+X02+X03+X04+X05)+0.05*U)
 W <- sqrt(1-0.2^2)*rnorm(N) + 0.2*U
 Z <- sqrt(1-0.2^2)*rnorm(N) + 0.2*U
 D <- rbinom(N,1,0.15+0.01*(X01+X02+X03+X04+X05)+0.1*X1+0.02*U+0.1*A)
 Y <- rep(N)
-Y <- -5*A + 0.5*(X01+X02+X03+X04+X05)+1*X1+0.5*U+rnorm(N)*10
+Y <- -5*A - 0.5*(X01+X02+X03+X04+X05)-1*X1-2*U-rnorm(N)*10
 Y <- Y*(1-D)
 
-Simulate
+Data <- data.frame(cbind(Y,A,D,Z,W,X01,X02,X03,X04,X05,X1))
 
+################################################################################
+# Random Seed
+################################################################################
 
-
-
+seed.data <- BATCH
+set.seed( seed.data ) 
+N <- nrow(Data)
 
 ################################################################################
 # Package and Source Files
@@ -63,7 +68,7 @@ NumCVRep <- 5
 
 ## Superlearner parameters
 SL.hpara <- list()
-SL.hpara$SLL <- c(1,2,3,4,5,6,7,9,10)
+SL.hpara$SLL <- 1 # c(1,2,3,4,5,6,7,9,10)
 
 # Superlearner basic learning algorithms:
 # 1: GLM
@@ -441,18 +446,17 @@ colnames(Result1) <-
     "Est.0", "SE.0") 
 
 write.csv(Result1,
-          sprintf("Result_PMMR_%s_B%0.5d.csv",
-                  FOLDER,
-                  seed.data),
+          sprintf("Result_PMMR_B%0.5d.csv",
+                  seed.data), 
           row.names=F)
 
 ################################################################################
 # Ignorability
 ################################################################################
 
-# No variation in X will cause an error for ML approaches
-Data[,X.pos ] <- Data[,X.pos ] + 
-  matrix(rnorm(nrow(Data)*5)*0.0001,nrow(Data),5)
+# No variation in X will cause an error for ML approaches, so add very tiny noise
+Data[,X.pos] <- Data[,X.pos] + 
+  matrix(rnorm(nrow(Data)*5)*0.0001,nrow(Data),6)
 
 Y <- Data[,Y.pos]
 A <- Data[,A.pos]
@@ -619,8 +623,7 @@ colnames(Result2) <-
     "Est.0", "SE.0")  
 
 write.csv(Result2,
-          sprintf("Result_Ign_%s_B%0.5d.csv",
-                  FOLDER,
+          sprintf("Result_Ign_B%0.5d.csv", 
                   seed.data),
           row.names=F)
 
