@@ -7,9 +7,9 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 * Software: R version 4.2.1
 * Packages: caret (version 6.0.93); earth (version 5.3.1); gam (version 1.22); gbm (version 2.1.8.1); glmnet (version 4.1.6); kernlab (version 0.9.32); MASS (version 7.3.58.2); matrix (version 1.4); mice (version 3.14.0); nnet (version 7.3.18); np (version 0.60.16); polspline (version 1.1.22); pracma (version 2.4.2); ranger (version 0.14.1); SuperLearner (version 2.0.28); xgboost (version 1.7.3.1)
 
-## `PCSE_Simulation` Folder
+## `Section6_Simulation` Folder
 
-* The `PCSE_Simulation` folder contains replication files for the simulation studies presented in Section 6 of the main paper and Section A9 of the supplementary material.
+* The `Section6_Simulation` folder contains replication files for the simulation studies presented in Section 6 of the main paper and Section A9 of the supplementary material.
 
 ### Codes
 
@@ -53,9 +53,9 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 	
 
 
-## `PCSE_SimulatedData` Folder 
+## `Section7_DataAnalysis` Folder 
 
-The `PCSE_SimulatedData` folder contains replication files that mimic the real-data analysis in Section 7 of the main paper. The Southwest Oncology Group (SWOG) data are not publicly available. Consequently, we provide replication code using simulated data that is compatible with the structure of the actual SWOG dataset. Because the simulated data may differ substantially from the true SWOG data, the resulting estimates may not match those reported in the main paper.
+The `Section7_DataAnalysis` folder contains replication files that mimic the real-data analysis in Section 7 of the main paper. The Southwest Oncology Group (SWOG) data are not publicly available. Therefore, we provide replication code based on simulated data (`Synthetic_SWOG_Data.csv`that shares the same structure as the actual SWOG dataset. This synthetic dataset was generated using the `synthpop` R package ([Nowok, Raab, Dibben, 2016](https://www.jstatsoft.org/article/view/v074i11 "synthpop")). Because the simulated data differ from the true SWOG data, the resulting estimates does not match those reported in the main paper.
 
 Interested readers can directly contact the study team of the SWOG trial (https://www.swog.org/) by requesting access to the dataset by requesting access via the provided email addresses at https://www.swog.org/about/contact-us. For a comprehensive understanding of the trial, please refer to  [Petrylak et al. (2004)](https://www.nejm.org/doi/full/10.1056/NEJMoa041318 "SWOG").
 
@@ -81,6 +81,8 @@ Park, Stensrud, Tchetgen Tchetgen (2024). **Proximal Causal Inference for  Condi
 Mastouri et al. (2021). **Proximal causal learning with kernels: Two-stage estimation and moment restriction**, _International conference on machine learning_ [[link](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")]
 
 van der Laan, Polley, Hubbard (2007). **Super learner**, _Statistical applications in genetics and molecular biology_ [[link](https://www.degruyter.com/document/doi/10.2202/1544-6115.1309/html "SL")]
+
+Nowok, Raab, Dibben (2016). **synthpop: Bespoke Creation of Synthetic Data in R**, _Journal of Statistical Software_ [[link](https://www.jstatsoft.org/article/view/v074i11 "synthpop")]
 
 Petrylak et al. (2004). **Docetaxel and Estramustine Compared with Mitoxantrone and Prednisone for Advanced Refractory Prostate Cancer**, _The New England Journal of Medicine_ [[link](https://www.nejm.org/doi/full/10.1056/NEJMoa041318 "SWOG")]
 

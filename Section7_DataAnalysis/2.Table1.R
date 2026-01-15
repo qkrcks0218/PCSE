@@ -8,6 +8,8 @@ Est.1.NoU <- Est.0.NoU <- Est.NoU <- SE.1.NoU <- SE.0.NoU <- SE.NoU <- rep(0,2)
 RRR1.1 <- read.csv("Result/RESULT_PMMR_Merge.csv")
 RRR1.0 <- read.csv("Result/RESULT_Ign_Merge.csv")
 
+nrow(RRR1.1);nrow(RRR1.0)
+
 SUM <- function(RRR){
   EST <- apply(RRR[,1+c(3,5,1)],2,median)
   SE <- sqrt( apply((RRR[,1+c(3,5,1)] - 

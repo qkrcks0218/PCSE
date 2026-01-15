@@ -14,25 +14,8 @@ if(length(args) == 1){
 # Generate a Simulated Dataset
 ################################################################################
 
-set.seed(1) # Fix a random seed for generating a simulated dataset
-N <- 487
-A <- rep(c(0,1),c(258,229))
-PrA0 <- mean(1-A)
-X01 <- rbinom(N,1,0.5)
-X02 <- rbinom(N,1,0.5)
-X03 <- rbinom(N,1,0.5)
-X04 <- rbinom(N,1,0.5)
-X05 <- rbinom(N,1,0.5)
-U   <- rnorm(N)
-X1  <- rbinom(N,1,0.2+0.05*A*(X01+X02+X03+X04+X05)+0.05*U)
-W <- sqrt(1-0.2^2)*rnorm(N) + 0.2*U
-Z <- sqrt(1-0.2^2)*rnorm(N) + 0.2*U
-D <- rbinom(N,1,0.15+0.01*(X01+X02+X03+X04+X05)+0.1*X1+0.02*U+0.1*A)
-Y <- rep(N)
-Y <- -4.5-2*A - 0.5*(X01+X02+X03+X04+X05)-1*X1-2*U-rnorm(N)*20
-Y <- Y*(1-D)
-
-Data <- data.frame(cbind(Y,A,D,Z,W,X01,X02,X03,X04,X05,X1))
+Data <- read.csv("Synthetic_SWOG_Data.csv")
+PrA0 <- mean(1-Data$A)
 
 ################################################################################
 # Random Seed
@@ -68,7 +51,7 @@ NumCVRep <- 5
 
 ## Superlearner parameters
 SL.hpara <- list()
-SL.hpara$SLL <- c(1,2,3,4,5,6,7,9,10)
+SL.hpara$SLL <- 3 # c(1,2,3,4,5,6,7,9,10)
 
 # Superlearner basic learning algorithms:
 # 1: GLM
@@ -454,9 +437,9 @@ write.csv(Result1,
 # Ignorability
 ################################################################################
 
-# No variation in X will cause an error for ML approaches, so add very tiny noise
+# No variation in X sometimes causes an error for ML approaches, so add very tiny noise
 Data[,X.pos] <- Data[,X.pos] + 
-  matrix(rnorm(nrow(Data)*5)*0.0001,nrow(Data),6)
+  matrix(rnorm(nrow(Data)*5)*0.0001,nrow(Data),5)
 
 Y <- Data[,Y.pos]
 A <- Data[,A.pos]
