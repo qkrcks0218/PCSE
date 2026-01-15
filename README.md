@@ -55,7 +55,7 @@ This supplementary file contains replication codes for "Proximal Causal Inferenc
 
 ## `Section7_DataAnalysis` Folder 
 
-The `Section7_DataAnalysis` folder contains replication files that mimic the real-data analysis in Section 7 of the main paper. The Southwest Oncology Group (SWOG) data are not publicly available. Therefore, we provide replication code based on simulated data (`Synthetic_SWOG_Data.csv`that shares the same structure as the actual SWOG dataset. This synthetic dataset was generated using the `synthpop` R package ([Nowok, Raab, Dibben, 2016](https://www.jstatsoft.org/article/view/v074i11 "synthpop")). Because the simulated data differ from the true SWOG data, the resulting estimates does not match those reported in the main paper.
+The `Section7_DataAnalysis` folder contains replication files that mimic the real-data analysis in Section 7 of the main paper. The Southwest Oncology Group (SWOG) data are not publicly available. Therefore, we provide replication code based on simulated data (`Synthetic_SWOG_Data.csv`) that shares the same structure as the actual SWOG dataset. This synthetic dataset was generated using the `synthpop` R package ([Nowok, Raab, Dibben, 2016](https://www.jstatsoft.org/article/view/v074i11 "synthpop")). Because the simulated data differ from the true SWOG data, the resulting estimates does not match those reported in the main paper.
 
 Interested readers can directly contact the study team of the SWOG trial (https://www.swog.org/) by requesting access to the dataset by requesting access via the provided email addresses at https://www.swog.org/about/contact-us. For a comprehensive understanding of the trial, please refer to  [Petrylak et al. (2004)](https://www.nejm.org/doi/full/10.1056/NEJMoa041318 "SWOG").
 
