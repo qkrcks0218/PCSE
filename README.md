@@ -1,6 +1,6 @@
 # Replication Files for "Proximal Causal Inference for  Conditional Separable Effects"
 
-This supplementary file contains replication codes for "Proximal Causal Inference for  Conditional Separable Effects" ([Park, Strensrud, Tchetgen Tchetgen, 2024](Link "PCSE")).
+This supplementary file contains replication codes for "Proximal Causal Inference for  Conditional Separable Effects" ([Park, Strensrud, Tchetgen Tchetgen, 2024](https://doi.org/10.1093/jrsssb/qkag051 "PCSE")).
 
 ## Software and Packages
 
@@ -76,11 +76,11 @@ Interested readers can directly contact the study team of the SWOG trial (https:
 
 ## References
 
-Park, Stensrud, Tchetgen Tchetgen (2024). **Proximal Causal Inference for  Conditional Separable Effects**, _arXiv_ [[link](Link "PCSE")]
+Park, Stensrud, Tchetgen Tchetgen (2026). **Proximal Causal Inference for  Conditional Separable Effects**, _Journal of the Royal Statistical Society, Series B (Statistical Methodology)_ [[link](https://doi.org/10.1093/jrsssb/qkag051 "PCSE")]
 
-Mastouri et al. (2021). **Proximal causal learning with kernels: Two-stage estimation and moment restriction**, _International conference on machine learning_ [[link](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")]
+Mastouri et al. (2021). **Proximal causal learning with kernels: Two-stage estimation and moment restriction**, _International Conference on Machine Learning_ [[link](https://proceedings.mlr.press/v139/mastouri21a.html "PMMR")]
 
-van der Laan, Polley, Hubbard (2007). **Super learner**, _Statistical applications in genetics and molecular biology_ [[link](https://www.degruyter.com/document/doi/10.2202/1544-6115.1309/html "SL")]
+van der Laan, Polley, Hubbard (2007). **Super learner**, _Statistical Applications in Genetics and Molecular Biology_ [[link](https://www.degruyter.com/document/doi/10.2202/1544-6115.1309/html "SL")]
 
 Nowok, Raab, Dibben (2016). **synthpop: Bespoke Creation of Synthetic Data in R**, _Journal of Statistical Software_ [[link](https://www.jstatsoft.org/article/view/v074i11 "synthpop")]
 
